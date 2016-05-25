@@ -1,0 +1,292 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.17. -n 选项 &mdash; GMT参考手册</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="GMT参考手册" href="index.html"/>
+        <link rel="up" title="5. 标准选项" href="options.html"/>
+        <link rel="next" title="5.18. -r 选项" href="option-gridreg.html"/>
+        <link rel="prev" title="5.16. -i 和 -o 选项" href="option-io.html"/>
+ 
+<!-- favicons -->
+
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/x-icon" type="image/png" />
+
+<!-- Opera Speed Dial Icon -->
+<link rel="icon" href="_static/apple-touch-icon-152x152.png" type="image/png" />
+
+<!-- Safari on iOS -->
+<link rel="apple-touch-icon" href="_static/apple-touch-icon.png"  type="image/png" />
+<link rel="apple-touch-icon" sizes="57x57" href="_static/apple-touch-icon-57x57.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="72x72" href="_static/apple-touch-icon-72x72.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="76x76" href="_static/apple-touch-icon-76x76.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="114x114" href="_static/apple-touch-icon-114x114.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="120x120" href="_static/apple-touch-icon-120x120.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="144x144" href="_static/apple-touch-icon-144x144.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="152x152" href="_static/apple-touch-icon-152x152.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="180x180" href="_static/apple-touch-icon-180x180.png" type="image/png" />
+
+<!-- For tiles on Windows -->
+<meta name="msapplication-TileImage" content="_static/apple-touch-icon-114x114.png"/>
+<meta name="msapplication-TileColor" content="#d83434"/>
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> GMT参考手册
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                5.2.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">目 录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preface.html">1. 前言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introductions.html">2. 简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">3. 基础知识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advances.html">4. 进阶知识</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="options.html">5. 标准选项</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="option-R.html">5.1. <code class="docutils literal"><span class="pre">-R</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-J.html">5.2. <code class="docutils literal"><span class="pre">-J</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-B.html">5.3. <code class="docutils literal"><span class="pre">-B</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-P.html">5.4. <code class="docutils literal"><span class="pre">-P</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-V.html">5.5. <code class="docutils literal"><span class="pre">-V</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-U.html">5.6. <code class="docutils literal"><span class="pre">-U</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-KO.html">5.7. <code class="docutils literal"><span class="pre">-K</span></code> 和 <code class="docutils literal"><span class="pre">-O</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-XY.html">5.8. <code class="docutils literal"><span class="pre">-X</span></code> 和 <code class="docutils literal"><span class="pre">-Y</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-a.html">5.9. <code class="docutils literal"><span class="pre">-a</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-binary.html">5.10. <code class="docutils literal"><span class="pre">-b</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-c.html">5.11. <code class="docutils literal"><span class="pre">-c</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-d.html">5.12. <code class="docutils literal"><span class="pre">-d</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-f.html">5.13. <code class="docutils literal"><span class="pre">-f</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-g.html">5.14. <code class="docutils literal"><span class="pre">-g</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-h.html">5.15. <code class="docutils literal"><span class="pre">-h</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-io.html">5.16. <code class="docutils literal"><span class="pre">-i</span></code> 和 <code class="docutils literal"><span class="pre">-o</span></code> 选项</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.17. <code class="docutils literal"><span class="pre">-n</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-gridreg.html">5.18. <code class="docutils literal"><span class="pre">-r</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-perspective.html">5.19. <code class="docutils literal"><span class="pre">-p</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-s.html">5.20. <code class="docutils literal"><span class="pre">-s</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-t.html">5.21. <code class="docutils literal"><span class="pre">-t</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-x.html">5.22. <code class="docutils literal"><span class="pre">-x</span></code> 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option-colon.html">5.23. <code class="docutils literal"><span class="pre">-:</span></code> 选项</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configurations.html">6. 配置GMT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projections.html">7. 投影方式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">8. 附录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQs.html">9. FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">GMT参考手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="options.html">5. 标准选项</a> &raquo;</li>
+      
+    <li>5.17. <code class="docutils literal"><span class="pre">-n</span></code> 选项</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/gmt-china/GMT_docs/blob/master/source/option-n.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="n">
+<h1>5.17. <code class="docutils literal"><span class="pre">-n</span></code> 选项<a class="headerlink" href="#n" title="永久链接至标题">¶</a></h1>
+<p><code class="docutils literal"><span class="pre">-n</span></code> 选项用于控制二维网格数据重采样过程中的插值算法。其语法为:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>-n<span class="o">[</span>b<span class="p">|</span>c<span class="p">|</span>l<span class="p">|</span>n<span class="o">][</span>+a<span class="o">][</span>+b&lt;BC&gt;<span class="o">][</span>+c<span class="o">][</span>+t&lt;threshold&gt;<span class="o">]</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">b</span></code> 表示B-sphine平滑算法， <code class="docutils literal"><span class="pre">c</span></code> 表示使用bicubic插值算法（默认值）， <code class="docutils literal"><span class="pre">l</span></code> 表示bilinear插值算法， <code class="docutils literal"><span class="pre">n</span></code>  表示nearest-neighbor值。</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">+a</span></code> ：关闭抗混淆（仅在算法支持的前提下有效）</li>
+<li><code class="docutils literal"><span class="pre">+b&lt;BC&gt;</span></code> ：设置网格的边界条件。 <code class="docutils literal"><span class="pre">&lt;BC&gt;</span></code> 可以取 <code class="docutils literal"><span class="pre">g</span></code> 、 <code class="docutils literal"><span class="pre">p</span></code> 、 <code class="docutils literal"><span class="pre">n</span></code> ，分别代表地理边界条件、周期边界条件和自然边界条件。对于后两种边界条件，可以在后面加上 <code class="docutils literal"><span class="pre">x</span></code> 或 <code class="docutils literal"><span class="pre">y</span></code> 表示边界条件仅对一个方向有效。比如 <code class="docutils literal"><span class="pre">-nb+bnxpy</span></code> 表明X方向使用自然边界条件，Y方向使用周期边界条件</li>
+<li><code class="docutils literal"><span class="pre">+c</span></code> ：假设原网格的Z值范围为zmin到zmax，插值后的网格范围可能为超过这一范围，使用 <code class="docutils literal"><span class="pre">+c</span></code> 则将超过zmin和zmax的部分裁剪掉</li>
+<li><code class="docutils literal"><span class="pre">+t&lt;threshold&gt;</span></code> 见官方文档</li>
+</ul>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="option-gridreg.html" class="btn btn-neutral float-right" title="5.18. -r 选项" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="option-io.html" class="btn btn-neutral" title="5.16. -i 和 -o 选项" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+  <!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="option-n" data-title='5.17. -n 选项' data-url="http://docs.gmt-china.org/option-n.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"gmt-china"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+<!-- 多说公共JS代码 end -->
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 2014-2016, GMT中文社区.
+      最后更新于 2016年05月25日.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'5.2.1-dev',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="http://www.josephjctang.com/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.10. 绘制修饰物 &mdash; GMT参考手册</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="GMT参考手册" href="index.html"/>
+        <link rel="up" title="4. 进阶知识" href="advances.html"/>
+        <link rel="next" title="4.11. 命令行历史" href="cmd-history.html"/>
+        <link rel="prev" title="4.9. 锚点" href="anchors.html"/>
+ 
+<!-- favicons -->
+
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/x-icon" type="image/png" />
+
+<!-- Opera Speed Dial Icon -->
+<link rel="icon" href="_static/apple-touch-icon-152x152.png" type="image/png" />
+
+<!-- Safari on iOS -->
+<link rel="apple-touch-icon" href="_static/apple-touch-icon.png"  type="image/png" />
+<link rel="apple-touch-icon" sizes="57x57" href="_static/apple-touch-icon-57x57.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="72x72" href="_static/apple-touch-icon-72x72.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="76x76" href="_static/apple-touch-icon-76x76.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="114x114" href="_static/apple-touch-icon-114x114.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="120x120" href="_static/apple-touch-icon-120x120.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="144x144" href="_static/apple-touch-icon-144x144.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="152x152" href="_static/apple-touch-icon-152x152.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="180x180" href="_static/apple-touch-icon-180x180.png" type="image/png" />
+
+<!-- For tiles on Windows -->
+<meta name="msapplication-TileImage" content="_static/apple-touch-icon-114x114.png"/>
+<meta name="msapplication-TileColor" content="#d83434"/>
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> GMT参考手册
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                5.2.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">目 录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preface.html">1. 前言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introductions.html">2. 简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">3. 基础知识</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="advances.html">4. 进阶知识</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="table-data.html">4.1. 表数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid-data.html">4.2. 网格文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpt.html">4.3. CPT文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="special-fonts.html">4.4. 特殊字体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="special-characters.html">4.5. 特殊字符</a></li>
+<li class="toctree-l2"><a class="reference internal" href="character-escape.html">4.6. 转义序列</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lines.html">4.7. 线条属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vectors.html">4.8. 绘制矢量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anchors.html">4.9. 锚点</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.10. 绘制修饰物</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">4.10.1. 参考点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">4.10.2. 锚点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">4.10.3. 偏移量</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">4.10.4. 背景面板</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cmd-history.html">4.11. 命令行历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="special-dirs.html">4.12. 特殊目录</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">5. 标准选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configurations.html">6. 配置GMT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projections.html">7. 投影方式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">8. 附录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQs.html">9. FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">GMT参考手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="advances.html">4. 进阶知识</a> &raquo;</li>
+      
+    <li>4.10. 绘制修饰物</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/gmt-china/GMT_docs/blob/master/source/embellishments.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>4.10. 绘制修饰物<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>GMT除了可以绘制常规的数据外，还可以绘制8种修饰物：地图比例尺、方向玫瑰图、磁场玫瑰图、颜色条、图例、Image overlay、GMT logo、map insert。</p>
+<p>8种修饰物的绘制有各自不同的语法，但这些修饰物都可以抽象为一个矩形。在如何指定修饰符在图上的位置方面，拥有共同的语法。</p>
+<p>下图中，大矩形代表底图，小矩形代表修饰物。要将一个修饰物放在底图上，首先要在底图上指定一个参考点，然后在修饰物上找到一个锚点，将修饰物的锚点放在图上的参考点上即可。</p>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="_images/GMT_anchors.png"><img alt="_images/GMT_anchors.png" src="_images/GMT_anchors.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">参考点与锚点</span></p>
+</div>
+<div class="section" id="id2">
+<h2>4.10.1. 参考点<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>可以用五种方式在图上指定一个参考点，其语法为:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="o">[</span>g<span class="p">|</span>j<span class="p">|</span>J<span class="p">|</span>n<span class="p">|</span>x<span class="o">]</span>&lt;refpoint&gt;
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><code class="docutils literal"><span class="pre">g</span></code> 用数据坐标指定参考点，比如 <code class="docutils literal"><span class="pre">g135W/20N</span></code> 表示参考点是西经135度北纬20度</li>
+<li><code class="docutils literal"><span class="pre">j</span></code> 指定底图的某个锚点作为参考点。关于锚点，见 <a class="reference internal" href="anchors.html"><span class="doc">锚点</span></a> 一节，在这种方式下，修饰物的锚点也默认使用相同的对齐方式代码。比如 <code class="docutils literal"><span class="pre">jTL</span></code> 将底图的左上角作为参考点，同时修饰物的锚点也是左上角，此时修饰物的左上角与底图左上角重合</li>
+<li><code class="docutils literal"><span class="pre">J</span></code> 与 <code class="docutils literal"><span class="pre">j</span></code> 类似，唯一的区别在于，修饰物的锚点默认使用镜像相反的锚点。比如 <code class="docutils literal"><span class="pre">JTL</span></code> 将底图的左上角作为参考点，同时修饰物的锚点是 <code class="docutils literal"><span class="pre">BR</span></code> 即右下角</li>
+<li><code class="docutils literal"><span class="pre">x</span></code> 用绘图坐标指定参考点。即相对于绘图原点的偏移距离。例如 <code class="docutils literal"><span class="pre">x2.75i/2c</span></code></li>
+<li><code class="docutils literal"><span class="pre">n</span></code> 用归一化坐标指定参考点，X方向和Y方向的坐标范围都是0到1。比如 <code class="docutils literal"><span class="pre">n0.2/0.1</span></code></li>
+</ol>
+<p>若未指定使用何种方式，则默认使用 <code class="docutils literal"><span class="pre">x</span></code> 指定参考点。</p>
+</div>
+<div class="section" id="id3">
+<h2>4.10.2. 锚点<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>在底图上指定了参考点之后，还需要在修饰物上指定锚点。可以使用子选项 <code class="docutils literal"><span class="pre">+j&lt;anchor&gt;</span></code> 来选定锚点。</p>
+<p>在不使用该选项的情况下，若使用 <code class="docutils literal"><span class="pre">j&lt;refpoint&gt;</span></code> 指定参考点，则锚点与参考点使用相同的代码；若使用 <code class="docutils literal"><span class="pre">J&lt;refpoint&gt;</span></code> 指定参考点，则锚点使用与参考点呈镜像相反的代码；对于其他指定参考点的方式而言，锚点默认为 <code class="docutils literal"><span class="pre">MC</span></code> （map rose和map scale）或 <code class="docutils literal"><span class="pre">BL</span></code> （其他修饰物）。</p>
+</div>
+<div class="section" id="id4">
+<h2>4.10.3. 偏移量<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>在指定参考点后，还可以对参考点指定额外的偏移量，尤其是使用 <code class="docutils literal"><span class="pre">j</span></code> 和 <code class="docutils literal"><span class="pre">J</span></code> 时。</p>
+<p>可以使用 <code class="docutils literal"><span class="pre">+o&lt;dx&gt;/&lt;dy&gt;</span></code> 选项指定参考点的额外偏移量，并且正偏移量所对应的偏移方向与两字符锚点代码所指定的方向相同，比如使用 <code class="docutils literal"><span class="pre">jBL</span></code> 时， <code class="docutils literal"><span class="pre">+o1c/1c</span></code> 表示首先将参考点放在左下角，在此基础上，向左下角偏移量 <code class="docutils literal"><span class="pre">1c/1c</span></code> 。</p>
+</div>
+<div class="section" id="id5">
+<h2>4.10.4. 背景面板<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>可以在这些修饰物的后面加上背景面板。面板的位置和大小由修饰物决定，除此之外，面板还有一些其他属性。通常，面板的属性由 <code class="docutils literal"><span class="pre">-F</span></code> 选项的子选项决定：</p>
+<ol class="arabic simple">
+<li><code class="docutils literal"><span class="pre">+g&lt;fill&gt;</span></code> 指定填充色，默认不填充</li>
+<li><code class="docutils literal"><span class="pre">+p&lt;pen&gt;</span></code> 指定边框画笔属性，默认使用 <a class="reference internal" href="conf-map.html#map-frame-pen"><span class="std std-ref">MAP_FRAME_PEN</span></a> 的值</li>
+<li><code class="docutils literal"><span class="pre">+r&lt;radius&gt;</span></code> 绘制圆角边框， <code class="docutils literal"><span class="pre">&lt;radius&gt;</span></code> 为圆角的半径</li>
+<li><code class="docutils literal"><span class="pre">+i&lt;gap&gt;/&lt;pen&gt;</span></code> 在边框内部绘制一个内边框， <code class="docutils literal"><span class="pre">&lt;gap&gt;</span></code> 是内外边框的空白距离， <code class="docutils literal"><span class="pre">&lt;pen&gt;</span></code> 为内边框的画笔属性，比如 <code class="docutils literal"><span class="pre">+i0.1c/thin,dahsed</span></code> ，默认使用 <a class="reference internal" href="conf-map.html#map-default-pen"><span class="std std-ref">MAP_DEFAULT_PEN</span></a></li>
+<li><code class="docutils literal"><span class="pre">+c&lt;clearance&gt;</span></code> 默认情况下面板的大小由修饰物的大小决定，可以使用该子选项为面板增加额外的尺寸。<ul>
+<li><code class="docutils literal"><span class="pre">+c&lt;gap&gt;</span></code> 为四个方向增加相同的空白距离</li>
+<li><code class="docutils literal"><span class="pre">+c&lt;xgap&gt;/&lt;ygap&gt;</span></code> 分别为X方向和Y方向指定不同的空白距离</li>
+<li><code class="docutils literal"><span class="pre">+c&lt;lgap&gt;/&lt;rgap&gt;/&lt;bgap&gt;/&lt;tgap&gt;</span></code> 分别为四个方向指定不同的空白距离</li>
+</ul>
+</li>
+<li><code class="docutils literal"><span class="pre">+s&lt;dx&gt;/&lt;dy&gt;/&lt;shade&gt;</span></code> 下拉阴影区。 <code class="docutils literal"><span class="pre">&lt;dx&gt;/&lt;dy&gt;</span></code> 是阴影区相对于面板的偏移量， <code class="docutils literal"><span class="pre">&lt;shade&gt;</span></code> 是阴影区的颜色，默认值为 <code class="docutils literal"><span class="pre">4p/-4p/gray50</span></code> 。</li>
+</ol>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="_images/GMT_panel.png"><img alt="_images/GMT_panel.png" src="_images/GMT_panel.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">GMT修饰物背景面板</span></p>
+<div class="legend">
+左图使用了 <code class="docutils literal"><span class="pre">-F+glightgreen+r</span></code> ，右图使用了 <code class="docutils literal"><span class="pre">-F+p1p+i+s+gwhite+c0.1i</span></code></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cmd-history.html" class="btn btn-neutral float-right" title="4.11. 命令行历史" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="anchors.html" class="btn btn-neutral" title="4.9. 锚点" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+  <!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="embellishments" data-title='4.10. 绘制修饰物' data-url="http://docs.gmt-china.org/embellishments.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"gmt-china"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+<!-- 多说公共JS代码 end -->
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 2014-2016, GMT中文社区.
+      最后更新于 2016年05月25日.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'5.2.1-dev',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="http://www.josephjctang.com/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

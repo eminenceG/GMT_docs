@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.7. 输入与输出 &mdash; GMT参考手册</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="GMT参考手册" href="index.html"/>
+        <link rel="up" title="3. 基础知识" href="basics.html"/>
+        <link rel="next" title="3.8. 数据格式" href="format.html"/>
+        <link rel="prev" title="3.6. 文字" href="text.html"/>
+ 
+<!-- favicons -->
+
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/x-icon" type="image/png" />
+
+<!-- Opera Speed Dial Icon -->
+<link rel="icon" href="_static/apple-touch-icon-152x152.png" type="image/png" />
+
+<!-- Safari on iOS -->
+<link rel="apple-touch-icon" href="_static/apple-touch-icon.png"  type="image/png" />
+<link rel="apple-touch-icon" sizes="57x57" href="_static/apple-touch-icon-57x57.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="72x72" href="_static/apple-touch-icon-72x72.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="76x76" href="_static/apple-touch-icon-76x76.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="114x114" href="_static/apple-touch-icon-114x114.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="120x120" href="_static/apple-touch-icon-120x120.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="144x144" href="_static/apple-touch-icon-144x144.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="152x152" href="_static/apple-touch-icon-152x152.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="180x180" href="_static/apple-touch-icon-180x180.png" type="image/png" />
+
+<!-- For tiles on Windows -->
+<meta name="msapplication-TileImage" content="_static/apple-touch-icon-114x114.png"/>
+<meta name="msapplication-TileColor" content="#d83434"/>
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> GMT参考手册
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                5.2.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">目 录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preface.html">1. 前言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introductions.html">2. 简介</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="basics.html">3. 基础知识</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="unit.html">3.1. 单位</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paper.html">3.2. 画布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="color.html">3.3. 颜色</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pen.html">3.4. 画笔</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fill.html">3.5. 填充</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text.html">3.6. 文字</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.7. 输入与输出</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">3.7.1. 表数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#d">3.7.2. 2D网格数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cpt">3.7.3. CPT文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ps">3.7.4. PS代码</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">3.7.5. 警告和错误消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">3.7.6. 退出状态码</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="format.html">3.8. 数据格式</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advances.html">4. 进阶知识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">5. 标准选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configurations.html">6. 配置GMT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projections.html">7. 投影方式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">8. 附录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQs.html">9. FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">GMT参考手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="basics.html">3. 基础知识</a> &raquo;</li>
+      
+    <li>3.7. 输入与输出</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/gmt-china/GMT_docs/blob/master/source/io.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>3.7. 输入与输出<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>GMT各个模块的输入和输出，可以分为如下几类：</p>
+<ol class="arabic simple">
+<li>表数据</li>
+<li>2D网格数据</li>
+<li>CPT文件</li>
+<li>PS代码</li>
+<li>警告和错误消息</li>
+<li>退出状态码</li>
+</ol>
+<div class="section" id="id2">
+<h2>3.7.1. 表数据<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>英文称为table data，也称为列数据或多列数据，常用于表示点和线。</p>
+<p>表数据中有N个记录，每个记录都有M个字段。表数据可以有三种形式：ASCII表、二进制表和netCDF表。</p>
+<p>最常用的表数据形式是ASCII表，可以用编辑器直接编辑。ASCII表中有N行M列，每行是一个记录，每列是一个字段。一个记录内的字段之间用空格、制表符、逗号或分号分隔。</p>
+<p>下面这个ASCII表数据有10行3列，三列数据分别代表经度、纬度和深度:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>133.949  34.219  20
+133.528  34.676  15
+130.233  33.410  43
+135.133  35.313  35
+131.377  34.398  22
+132.792  34.457  34
+133.620  34.936  6
+131.101  32.811  23
+129.435  33.212  55
+133.144  33.647  67
+</pre></div>
+</div>
+<p>关于表数据的详细介绍，见 <a class="reference internal" href="table-data.html"><span class="doc">表数据</span></a> 。</p>
+</div>
+<div class="section" id="d">
+<h2>3.7.2. 2D网格数据<a class="headerlink" href="#d" title="永久链接至标题">¶</a></h2>
+<p>GMT可以绘制2D网格数据。通常，2D网格文件的横轴是经度、纵轴是纬度，Z值可以表示高程、重力值、温度、速度等。</p>
+<p>GMT可以使用的2D网格数据有三种格式：</p>
+<ol class="arabic simple">
+<li>NetCDF格式</li>
+<li>Sun光栅文件</li>
+<li>自定义的二进制数据格式</li>
+</ol>
+<p>最常见也最推荐的网格数据格式是NetCDF格式。</p>
+<p>关于网格数据的详细介绍，见 <a class="reference internal" href="grid-data.html"><span class="doc">网格文件</span></a> 。</p>
+</div>
+<div class="section" id="cpt">
+<h2>3.7.3. CPT文件<a class="headerlink" href="#cpt" title="永久链接至标题">¶</a></h2>
+<p>CPT文件全称color palette table，中文称为调色板文件或色标文件。</p>
+<p>CPT文件的作用在于定义了任意一个Z值所对应的颜色，常用于绘制彩图、灰度图，或根据数据的不同属性填充不同的颜色。</p>
+<p>关于网格文件的详细介绍，见 <a class="reference internal" href="cpt.html"><span class="doc">CPT文件</span></a> 。</p>
+</div>
+<div class="section" id="ps">
+<h2>3.7.4. PS代码<a class="headerlink" href="#ps" title="永久链接至标题">¶</a></h2>
+<p>GMT的绘图模块会生成PS代码到标准输出流。为了将结果保存到PS文件中，需要将PS代码重定向到PS文件中。</p>
+<p>PS代码几乎只能作为GMT模块的输出，偶尔可以作为输入。</p>
+</div>
+<div class="section" id="id3">
+<h2>3.7.5. 警告和错误消息<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>GMT在运行时，会将语法信息、错误报告、警告信息等发送到标准错误流。详情见 <a class="reference internal" href="option-V.html"><span class="doc">-V 选项</span></a>  。</p>
+</div>
+<div class="section" id="id4">
+<h2>3.7.6. 退出状态码<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>每个模块在退出时都会返回状态码，值为1表示成功，其他值表示失败。</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="format.html" class="btn btn-neutral float-right" title="3.8. 数据格式" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="text.html" class="btn btn-neutral" title="3.6. 文字" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+  <!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="io" data-title='3.7. 输入与输出' data-url="http://docs.gmt-china.org/io.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"gmt-china"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+<!-- 多说公共JS代码 end -->
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 2014-2016, GMT中文社区.
+      最后更新于 2016年05月25日.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'5.2.1-dev',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="http://www.josephjctang.com/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

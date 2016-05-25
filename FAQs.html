@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>9. FAQ &mdash; GMT参考手册</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="GMT参考手册" href="index.html"/>
+        <link rel="prev" title="8.15. GMT C API" href="gmt-c-api.html"/>
+ 
+<!-- favicons -->
+
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/x-icon" type="image/png" />
+
+<!-- Opera Speed Dial Icon -->
+<link rel="icon" href="_static/apple-touch-icon-152x152.png" type="image/png" />
+
+<!-- Safari on iOS -->
+<link rel="apple-touch-icon" href="_static/apple-touch-icon.png"  type="image/png" />
+<link rel="apple-touch-icon" sizes="57x57" href="_static/apple-touch-icon-57x57.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="72x72" href="_static/apple-touch-icon-72x72.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="76x76" href="_static/apple-touch-icon-76x76.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="114x114" href="_static/apple-touch-icon-114x114.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="120x120" href="_static/apple-touch-icon-120x120.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="144x144" href="_static/apple-touch-icon-144x144.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="152x152" href="_static/apple-touch-icon-152x152.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="180x180" href="_static/apple-touch-icon-180x180.png" type="image/png" />
+
+<!-- For tiles on Windows -->
+<meta name="msapplication-TileImage" content="_static/apple-touch-icon-114x114.png"/>
+<meta name="msapplication-TileColor" content="#d83434"/>
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> GMT参考手册
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                5.2.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">目 录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preface.html">1. 前言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introductions.html">2. 简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">3. 基础知识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advances.html">4. 进阶知识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">5. 标准选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configurations.html">6. 配置GMT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projections.html">7. 投影方式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">8. 附录</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">GMT参考手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>9. FAQ</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/gmt-china/GMT_docs/blob/master/source/FAQs.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="faq">
+<h1>9. FAQ<a class="headerlink" href="#faq" title="永久链接至标题">¶</a></h1>
+<ol class="arabic">
+<li><p class="first">使用psxy或其他类似命令时，出现:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>psxy: Mismatch between actual <span class="o">(</span>1<span class="o">)</span> and expected <span class="o">(</span>2<span class="o">)</span> fields near line <span class="m">10</span> <span class="o">(</span>skipped<span class="o">)</span>
+</pre></div>
+</div>
+<p>出现该错误的原因是当前命令需要两列数据，而在第10行左右数据只有一列。此时需要人工检查一下第10行附近的数据。需要注意，这里的第10行不一定是准备数字。</p>
+</li>
+<li><p class="first">在使用地图投影时，为何无法给坐标轴加标签？命令如下:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>gmt psbasemap -R0/10/0/10 -JM10c -B1 -Bx+l<span class="s2">&quot;Latitude&quot;</span> -By+<span class="s2">&quot;Longtitude&quot;</span> &gt; a.ps
+</pre></div>
+</div>
+<p>从绘图效果中可以看出，“Latitude”和“Longtitude”是没有加进去的。这不是Bug，而是一个Feature。因为对于使用地图投影绘制的地图，从“火车道”边框或标注上的“度”符号都可以直观的知道这是一个地图投影而不是笛卡尔投影。而对于地图投影来说，X方向是经度、Y方向是纬度，是基本常识，给坐标轴加label反而是多此一举，故而对于地图投影来说，坐标轴是不能加label的。</p>
+<p>如果执意要给坐标轴加label，只能用pstext手动添加。</p>
+</li>
+<li><p class="first">在Windows下写了bat脚本，执行bat脚本时黑屏一闪而过，看不到出错信息。</p>
+<p>解决办法：在脚本的最后加上 <code class="docutils literal"><span class="pre">pause</span></code> 。</p>
+</li>
+<li><p class="first">出现如下错误:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>Long input record <span class="o">(</span>xxx bytes<span class="o">)</span> was truncated to first xx bytes!
+</pre></div>
+</div>
+<p>出现该错误的原因是输入数据的一行超过特定的长度（一般是512字符），此时GMT会对输入数据做截断。出现该错误的常见原因是在将多个记录通过管道传递给命令时，记录末尾的换行符丢失，导致多个记录连成一行传递给命令。</p>
+</li>
+<li><p class="first">安装GMT后用 <code class="docutils literal"><span class="pre">pscoast</span></code> 绘图时出现如下错误:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>pscoast: GSHHG version 2.2.0 or newer is needed to use coastlines with GMT.
+Get and install GSHHG from ftp://ftp.soest.hawaii.edu/gshhg/.
+pscoast: Could not find file <span class="o">[</span>GSHHG crude resolution shorelines<span class="o">]</span>
+pscoast: No GSHHG databases available - must abort
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">pscoast</span></code> 能够正常运行的前提是：</p>
+<ol class="arabic simple">
+<li>在 <code class="docutils literal"><span class="pre">$GMTHOME/share/coast</span></code> 目录下能够找到GSHHG数据文件（一堆以.nc结尾的文件）</li>
+<li>GSHHG数据文件有可读权限</li>
+<li>GSHHG数据文件的版本号大于2.2.0</li>
+<li>系统的netCDF软件在编译时支持netCDF4格式</li>
+</ol>
+<p>针对以上几点，如果出现了题中所说的错误，可以通过如下方式逐一排除：</p>
+<ol class="arabic simple">
+<li>检查 <code class="docutils literal"><span class="pre">$GMTHOME/share/coast</span></code> 目录下是否有GSHHG数据文件</li>
+<li>在 <code class="docutils literal"><span class="pre">share/coast</span></code> 目录下执行 <code class="docutils literal"><span class="pre">ls</span> <span class="pre">-l</span></code> 检查数据文件是否有可读权限</li>
+<li>打开 <code class="docutils literal"><span class="pre">README.TXT</span></code> 里，版本号是否大于2.2.0</li>
+<li>终端执行 <code class="docutils literal"><span class="pre">nc-config</span> <span class="pre">--has-nc4</span></code> 以检查netCDF软件是否支持netCDF4格式，若为 <code class="docutils literal"><span class="pre">yes</span></code> 则表示支持</li>
+</ol>
+</li>
+</ol>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="gmt-c-api.html" class="btn btn-neutral" title="8.15. GMT C API" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+  <!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="FAQs" data-title='9. FAQ' data-url="http://docs.gmt-china.org/FAQs.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"gmt-china"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+<!-- 多说公共JS代码 end -->
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 2014-2016, GMT中文社区.
+      最后更新于 2016年05月25日.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'5.2.1-dev',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="http://www.josephjctang.com/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
